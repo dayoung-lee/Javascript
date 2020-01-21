@@ -2,48 +2,9 @@
 <html lang = "en">
 <head>
     <title>example 1</title>
-    <script>
-        var Body = {
-            setColor:function (color){
-                document.querySelector('body').style.color = color;
-            },
-            setBackgroundColor:function (color){
-                document.querySelector('body').style.backgroundColor = color;
-            }
-        }
-        var Links = {
-            setColor:function (color){
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while(i < alist.length){
-                    console.log(alist[i]);
-                    alist[i].style.color = color;
-                    i++;
-                }
-            }
-        }
-        function nightDayHandler(self){
-            var target = document.querySelector('body');
-            if(self.value === 'night')
-            {
-                Body.setBackgroundColor('black');
-                Body.setColor('white');
-                self.value = 'day';
-                Links.setColor('powderblue');
-            }
-            else {
-                Body.setBackgroundColor('white');
-                Body.setColor('black');
-                self.value = 'night';
-                Links.setColor('blue');
-            }
-        }
-        function countingWords(){
-            document.getElementById("textCountResult").innerHTML = document.getElementById("textArea").value.length;
-        }    
-    </script>
+    <script src = "colors.js"></script>
+    <script src = "clock.js"></script>
 </head>
-
 <body>
     <h1><a href = "index.html">Javascript example 1 </a></h1>
     <p>Souce : <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/1/index.html'">
@@ -116,8 +77,7 @@
     </script>
     </ul>
     <!-- Date -->
-    <h1 id = "time-result"></h1>
-    <script src = "clock.js"></script>
+    <h1 id = "time-result"></h1>    
 </body>
 
 </html>
