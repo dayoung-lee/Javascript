@@ -2,33 +2,53 @@
 <html lang = "en">
 <head>
     <title>example 1</title>
+    <script>
+        function nightDayHandler(self){
+        var target = document.querySelector('body');
+        if(self.value === 'night')
+        {
+            target.style.backgroundColor = 'black'; target.style.color = 'white';
+            self.value = 'day';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'powderblue';
+                i++;
+            }
+        }
+        else {
+            target.style.backgroundColor = 'white'; target.style.color = 'black'
+            self.value = 'night';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = 'blue';
+                i++;
+            }
+        }
+        }
+        function countingWords(){
+            document.getElementById("textCountResult").innerHTML = document.getElementById("textArea").value.length;
+        }
+    
+    </script>
 </head>
 
 <body>
     <h1><a href = "index.html">Javascript example 1 </a></h1>
+    <p>Souce : <input type = "button" value = "Click here" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/1/index.html'"></p>
     1. Theme: 
     <input type = "button" value = "night" onclick = "document.querySelector('body').style.backgroundColor = 'black'; document.querySelector('body').style.color = 'white'">
-    <input type = "button" value = "day" onclick="document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'">
+    <input type = "button" value = "day" onclick = "document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'">
     <br/><br/>
-    1-1. Toggle:
-    <input type = "button" value = "night" onclick = "
-        var target = document.querySelector('body');
-        if(this.value === 'night')
-        {
-            target.style.backgroundColor = 'black'; target.style.color = 'white';
-            this.value = 'day';
-        }
-        else {
-            target.style.backgroundColor = 'white'; target.style.color = 'black'
-            this.value = 'night';
-        }
-    ">
+    1-1. Toggle & Function (this):
+    <input type = "button" value = "night" onclick = "nightDayHandler(this)">
     <p id = "test">Hi this is javascript example1.</p>
-    <textarea style = "width: 300px;" id = "textArea" placeholder = "type here" onkeyup = "countingWords()"></textarea>
-    <script>        function countingWords(){
-            document.getElementById("textCountResult").innerHTML = document.getElementById("textArea").value.length;
-        }
-    </script>    
+    
+    <!-- Word Count -->
+    <textarea style = "width: 300px; height: 100px;" id = "textArea" placeholder = "type here" onkeyup = "countingWords()"></textarea> 
     Words: <span id = "textCountResult">0</span><br/><br/>
 
     <div id = 'list'>
@@ -45,8 +65,32 @@
         3. onchange alert : <input type = "text" onchange="alert('changed')">
         onkeydown alert: <input type = "text" onkeydown="alert('key down!')">
     </p>
-    4. 
 
+    <p>4. Loop(Array)</p>
+    <ul>
+    <script>
+        var i = 0;
+        var fruitArray = ['banana', 'apple', 'pear', 'kiwi', 'grapes'];
+        while(i < fruitArray.length){
+            document.write('<li><a href = "http://google.com">' + fruitArray[i] +'</a></li>');
+            i++;
+        }
+    </script>
+    </ul>
+
+    <p>5. Function </p>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-3</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
     <!-- Date -->
     <h1 id = "time-result"></h1>
     <script src = "clock.js"></script>
