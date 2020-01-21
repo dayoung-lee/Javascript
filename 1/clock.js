@@ -1,6 +1,7 @@
-var result = document.getElementById("time-result");
+
 
 function clock(){
+    var result = document.getElementById("time-result");
     var d = new Date;
     var week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     var currentDate = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate() + " " + `${week[d.getDay()]}`;
