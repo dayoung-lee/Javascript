@@ -10,4 +10,4 @@
 
 # UI vs API
 - UI : User Interface
-- API : Application Programming Interface
+- API : Application Programming Interface. It is a bunch of operations that developers can use, along with a description of what they do. The developer doesn't necessarily need to know how.
