@@ -1,2 +1,3 @@
 # Javascript
-This is Javascript examples for studying myself
+- This is Javascript examples for studying myself
+- https://dayoung-lee.github.io/Javascript/
