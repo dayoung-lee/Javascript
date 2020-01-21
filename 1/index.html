@@ -23,7 +23,22 @@
             this.value = 'night';
         }
     ">
-    <p>Hi this is javascript example1.</p>
+    <p id = "test">Hi this is javascript example1.</p>
+    <textarea style = "width: 300px;" id = "textArea" placeholder = "type here" onkeyup = "countingWords()"></textarea>
+    <script>        function countingWords(){
+            document.getElementById("textCountResult").innerHTML = document.getElementById("textArea").value.length;
+        }
+    </script>    
+    Words: <span id = "textCountResult">0</span><br/><br/>
+
+    <div id = 'list'>
+        List: 
+        <ol>
+            <li><a href = "#">HTML</a></li>
+            <li><a href = "#">CSS</a></li>
+            <li><a href = "#">Javascript</a></li>
+        </ol>
+    </div>
 
     2. <input type = "button" value = "Alert Message" onclick = "alert('Success')">
     <p>
