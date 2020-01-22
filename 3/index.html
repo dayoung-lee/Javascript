@@ -48,14 +48,14 @@
             // now logout
             FB.login(function(res){
                 // handle the response 
-                console.log('login =>', res);
+                console.log(this.value);
                 this.value = 'Logout';
             }); 
         }else {
             // now login
             FB.logout(function(res){
                 // handle the response 
-                console.log('logout =>', res);
+                console.log(this.value);
                 this.value = 'Login';
             }); 
         }
