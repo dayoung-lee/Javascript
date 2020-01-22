@@ -19,10 +19,10 @@ SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
 ## 3. Facebook login 
 Factbook API, Factboodk javascript SDK, Access token (https://developers.facebook.com/?ref=logo_click)<br/>
 SDK: software development kit
-1. load SDK (download) line 22 index.hmtl
-2. SDK init (client id) line 8 index.html (appID & facebook api changelog log)
-3. Login FB.login();
-4. Logout
-5. isLogined
-6. call facebook API
+1. load SDK (download): line 22 index.hmtl
+2. SDK init (client id): line 8 index.html (appID & facebook api changelog log)
+3. Login: FB.login();
+4. Logout: FB.logout();
+5. isLogined: function checkLoginStatus();
+6. call facebook API user profile: graph API
 + https://dayoung-lee.github.io/Javascript/3/index.html
