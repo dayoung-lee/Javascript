@@ -3,6 +3,7 @@ This is Javascript examples for studying myself
 ## 1. Basic Concept of JavaScript
 + https://dayoung-lee.github.io/Javascript/1/index.html
   + data type, if/while/for loop, array, function, object
+  + object.function => method ex) person.fullName();
   
 ## 2. Ajax
 Ajax : Asyncronous JavaScript and XML<br/>
@@ -18,8 +19,8 @@ SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
 ## 3. Facebook login 
 Factbook API, Factboodk javascript SDK, Access token (https://developers.facebook.com/?ref=logo_click)<br/>
 SDK: software development kit
-1. load SDK (download)
-2. SDK init (client id)
+1. load SDK (download) line 22 index.hmtl
+2. SDK init (client id) line 8 index.html
 3. Login
 4. Logout
 5. isLogined
