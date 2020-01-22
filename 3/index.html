@@ -41,7 +41,21 @@
     </script>
 </head>
 <body>
-    <input type = "button" id = "authBtn" valuce="checking...">
+    <input type = "button" id = "authBtn" valuce="checking..." onclick = "
+        if(this.value === 'Login'){
+            // now logout
+            FB.login(function(res){
+                // handle the response 
+                console.log('login =>', res);
+            }); 
+        }else {
+            // now login
+            FB.logout(function(res){
+                // handle the response 
+                console.log('logout =>', res);
+            }); 
+        }
+    ">
 
     <h1><a href = "#!welcome" onclick = "fetchPage('welcome')">WEB</a></h1>
     <p>Souce: <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/tree/master/3'">
