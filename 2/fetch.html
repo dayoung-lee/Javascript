@@ -10,8 +10,8 @@
             //         document.querySelector('article').innerHTML = text;
             //     })
             // })
-            // Asynchronouse 비동기 fetch가 되는동안 다른것부터 먼저 실행 1=> 2=> response end
-            // 동기로 시작하면 response end => 1 => 2
+            // Asynchronous : 비동기 fetch가 되는동안 다른것부터 먼저 실행 1=> 2=> response end
+            // If not asysnchronous : 동기로 시작하면 response end => 1 => 2
             // function callbackme(){
             //     console.log('response end');
             // }
@@ -19,8 +19,11 @@
             //     console.log('response end');
             // }
             
-            fetch('html').then(function(response){
-                console.log(response);
+            fetch('javascript').then(function(response){
+                console.log(response.status);
+                if(response.status == '404'){
+                    alert('Not found')
+                }
             });
             console.log(1);
             console.log(2);
