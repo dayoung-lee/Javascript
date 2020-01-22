@@ -25,4 +25,4 @@ SDK: software development kit
 4. Logout: FB.logout();
 5. isLogined: function checkLoginStatus();
 6. call facebook API user profile: graph API
-+ https://dayoung-lee.github.io/Javascript/3/index.html
++ https://dayoung-lee.github.io/liveDemo/p4/index.html
