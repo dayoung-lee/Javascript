@@ -1,8 +1,8 @@
 # Javascript
 This is Javascript examples for studying myself
-## 1.
+## 1. Basic Concept of JavaScript
 + https://dayoung-lee.github.io/Javascript/1/index.html
-  + Basic concepts : data type, if/while/for loop, array, function, object
+  + data type, if/while/for loop, array, function, object
   
-## 2.
+## 2. Ajax
 + https://dayoung-lee.github.io/Javascript/2/index.html
