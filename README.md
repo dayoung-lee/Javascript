@@ -7,7 +7,7 @@ This is Javascript examples for studying myself
 ## 2. Ajax
 Ajax : Asyncronous
 + https://dayoung-lee.github.io/Javascript/2/index.html
-  + fetch(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
+  + fetch API(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
   + bookmark (#! hashbang) #!welcome, #!html, #!css, #!javascript
   + a href="#!javascript" onclick = "fetchPage('javascript')">Javascript/a
