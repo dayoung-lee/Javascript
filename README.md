@@ -7,3 +7,4 @@ This is Javascript examples for studying myself
 ## 2. Ajax
 Ajax : Asyncronous
 + https://dayoung-lee.github.io/Javascript/2/index.html
+  + fetch, hash
