@@ -5,17 +5,16 @@
     <title>Web - welcome</title>
 </head>
 <body>
-    <h1><a href = "index.html">WEB</a></h1>
-    <input id="night_day" type="button" value="night" onclick="
-    nightDayHandler(this);
-    ">
-    <ol>
-        <li><a onclick = "fetchPage('html')">HTML</a></li>
-        <li><a onclick = "fetchPage('css')">CSS</a></li>
-        <li><a onclick = "fetchPage('javascript')">Javascript</a></li>
+    <h1><a href = "#!welcome" onclick = "fetchPage('welcome')">WEB</a></h1>
+    <p>Souce: <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/tree/master/2'">
+        <input type = "button" value = "new tab" onclick = "window.open('https://github.com/dayoung-lee/Javascript/tree/master/2');"></p>
+    Theme: <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+    <ol id = "nav"> 
+        <!--list-->
     </ol>
+
     <article>      
-        The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.          
+        <!--welcome, html, css, javascript-->    
     </article>
 
     <h3>fetch Ajax response</h3><img src = "fetch_response.jpg"style="width: 383px;">
@@ -30,7 +29,32 @@
                     document.querySelector('article').innerHTML = text;
                 })
             });
-        }        
+        }
+
+        if(location.hash){
+            fetchPage(location.hash.substr(2)); //#! welcome, #! html, #! css, #! javascript
+        }else{
+            fetchPage('welcome');
+        }            
+        fetch('list').then(function(response){
+            response.text().then(function(text){                    
+                console.log(text); // html, css, javascript, ajax
+                var items = text.split(','); // make array from string
+                console.log(items); // array(4) 0: "html" 1: "css" 2: "javascript" 3: "ajax"
+                var i = 0;
+                var tags = '';                    
+
+                while(i<items.length){
+                    var item = items[i]; // item : html, css, javascript, ajax
+                    // <li><a href="#!html" onclick = "fetchPage('html')">HTML</a></li>
+                    var tag = '<li><a href = "#!' + item + '" onclick = "fetchPage(\''+ item + '\')">'+ item + '</a></li>';
+                    tags = tags + tag;
+                    console.log(tags);
+                    i++;
+                }
+                document.querySelector('#nav').innerHTML = tags; // <ol id = "nav"> you can add more list or edit in list(text file)
+            })
+        });
     </script>
 </body>
 </html>
