@@ -5,7 +5,7 @@ This is Javascript examples for studying myself
   + data type, if/while/for loop, array, function, object
   
 ## 2. Ajax
-Ajax : Asyncronous JavaScript and XML
+Ajax : Asyncronous JavaScript and XML<br/>
 SPA : Single Page Application
 + https://dayoung-lee.github.io/Javascript/2/index.html
   + fetch API(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
