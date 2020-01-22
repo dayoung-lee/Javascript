@@ -50,12 +50,14 @@
                 // handle the response 
                 console.log(res);
             }); 
+            this.value = 'Logout';
         }else {
             // now login
             FB.logout(function(res){
                 // handle the response 
                 console.log(res);
             }); 
+            this.value = 'Login';
         }
     ">
     <div id="fb-root"></div>
