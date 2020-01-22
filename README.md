@@ -5,4 +5,5 @@ This is Javascript examples for studying myself
   + data type, if/while/for loop, array, function, object
   
 ## 2. Ajax
+Ajax : Asyncronous
 + https://dayoung-lee.github.io/Javascript/2/index.html
