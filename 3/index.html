@@ -24,9 +24,9 @@
                 console.log(response);
                 //statusChangeCallback(response);
                 if(response.status === 'connected'){
-                    document.querySelector('#authBtn').value = 'Logout';
+                    // document.querySelector('#authBtn').value = 'Logout';
                 }else{
-                    document.querySelector('#authBtn').value = 'Login';
+                    // document.querySelector('#authBtn').value = 'Login';
                 }
             }
             FB.getLoginStatus(callback);
@@ -44,7 +44,7 @@
 </head>
 <body>
     <input type = "button" id = "authBtn" value="checking..." onclick = "
-        if(document.querySelector('#authBtn').value === 'Login'){
+        if(this.value === 'Login'){
             // now logout
             FB.login(function(res){
                 // handle the response 
