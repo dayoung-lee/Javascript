@@ -49,12 +49,14 @@
             FB.login(function(res){
                 // handle the response 
                 console.log('login =>', res);
+                this.value = 'Logout';
             }); 
         }else {
             // now login
             FB.logout(function(res){
                 // handle the response 
                 console.log('logout =>', res);
+                this.value = 'Login';
             }); 
         }
     ">
