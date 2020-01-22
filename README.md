@@ -9,3 +9,4 @@ Ajax : Asyncronous
 + https://dayoung-lee.github.io/Javascript/2/index.html
   + fetch(chage contents): https://dayoung-lee.github.io/Javascript/2/fetch.html 
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
+  + bookmark (#! hashbang)
