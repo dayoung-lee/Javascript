@@ -43,7 +43,7 @@
     </script>
 </head>
 <body>
-    <input type = "button" id = "authBtn" value="checking..." onclick = "
+    Facebook Login : <input type = "button" id = "authBtn" value="checking..." onclick = "
         if(this.value === 'Login'){
             // now logout
             FB.login(function(res){
@@ -54,8 +54,7 @@
         }else {
             // now login
             FB.logout(function(res){
-                // handle the response 
-                console.log(res);
+                // handle the response                 
             }); 
             this.value = 'Login';
         }
