@@ -10,4 +10,4 @@ WAMP(Window+Apache HTTP Server+MySQL+PHP)
 + http://127.0.0.1/index.html
   + 127.0.0.1 => Internet Protocol Address
   + default : C:\Bitnami\wampstack-7.3.13-0\apache2\htdocs\index.html
-  
+  + can change it to my computer's IP address.  
