@@ -24,9 +24,9 @@
                 console.log(response);
                 //statusChangeCallback(response);
                 if(response.status === 'connected'){
-                    // document.querySelector('#authBtn').value = 'Logout';
-                }else{
-                    // document.querySelector('#authBtn').value = 'Login';
+                    document.querySelector('#authBtn').value = 'Logout'; // checking to Logout
+                }else{ 
+                    document.querySelector('#authBtn').value = 'Login'; // checking to Login
                 }
             }
             FB.getLoginStatus(callback);
