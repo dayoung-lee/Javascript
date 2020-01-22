@@ -28,4 +28,6 @@ SDK: software development kit
 + https://dayoung-lee.github.io/liveDemo/p4/index.html
 
 ## 4. Node.js
-1. create server
+- create server
+  -http://opentutorials.org:3000/main?id=HTML&page=12
+  - http: protocol, opentutorials.com: host(domail), :3000 (port), main: path, id=HTML&page=12: query string
