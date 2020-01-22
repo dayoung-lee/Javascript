@@ -5,6 +5,17 @@
     <meta charset="utf-8">
     <script src = "fetch-master/fetch.js"></script>    
     <script>
+         //check if user login or out
+         var checkLoginStatus = function(response){
+            console.log(response);
+            //statusChangeCallback(response);
+            if(response.status === 'connected'){
+                document.querySelector('#authBtn').value = 'Logout'; // checking to Logout
+            }else{ 
+                document.querySelector('#authBtn').value = 'Login'; // checking to Login
+            }
+        }
+
         window.fbAsyncInit = function() {
             FB.init({
             appId      : '2525173601079397',
@@ -17,19 +28,8 @@
             //     FB.getLoginStatus(function(response) {  
             //       statusChangeCallback(response);
             //     });
-            //   }
-            
-            //check if user login or out
-            var callback = function(response){
-                console.log(response);
-                //statusChangeCallback(response);
-                if(response.status === 'connected'){
-                    document.querySelector('#authBtn').value = 'Logout'; // checking to Logout
-                }else{ 
-                    document.querySelector('#authBtn').value = 'Login'; // checking to Login
-                }
-            }
-            FB.getLoginStatus(callback);
+            //   }           
+            FB.getLoginStatus(checkLoginStatus);
         };
     
         (function(d, s, id) {                      // Load the SDK asynchronously
@@ -48,15 +48,16 @@
             // now logout
             FB.login(function(res){
                 // handle the response 
-                console.log(res);
+                console.log('login => ', res);
+                checkLoginStatus(res);
             }); 
-            this.value = 'Logout';
         }else {
             // now login
             FB.logout(function(res){
-                // handle the response                 
+                // handle the response
+                console.log('logout => ', res);
+                checkLoginStatus(res);                 
             }); 
-            this.value = 'Login';
         }
     ">
     <div id="fb-root"></div>
