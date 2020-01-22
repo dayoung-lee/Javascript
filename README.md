@@ -8,6 +8,8 @@ This is Javascript examples for studying myself
 Ajax : Asyncronous
 + https://dayoung-lee.github.io/Javascript/2/index.html
   + fetch API(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
+  + fetch API polyfill (to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications)
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
   + bookmark (#! hashbang) #!welcome, #!html, #!css, #!javascript  
+ 
   + Bad idea: SEO(search engine optimization) crawling issues, indexing issues, broken website navigation and useless addressbar (all pages load under the same URL), usless back/next/reload buttons/potential cloaking issues 
