@@ -25,4 +25,4 @@ SDK: software development kit
 4. Logout
 5. isLogined
 6. call facebook API
-+ https://dayoung-lee.github.io/Javascript/3
++ https://dayoung-lee.github.io/Javascript/3/index.html
