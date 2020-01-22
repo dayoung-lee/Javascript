@@ -11,8 +11,14 @@
             //statusChangeCallback(response);
             if(response.status === 'connected'){
                 document.querySelector('#authBtn').value = 'Logout'; // checking to Logout
+                /* make the API call */
+                FB.api('/me', function(resp){
+                    console.log(resp);
+                    document.querySelector('#name').innerHTML = 'Welcome, ' + resp.name + '!';
+                });
             }else{ 
                 document.querySelector('#authBtn').value = 'Login'; // checking to Login
+                document.querySelector('#name').innerHTML = '';
             }
         }
 
@@ -43,7 +49,7 @@
     </script>
 </head>
 <body>
-    Facebook Login : <input type = "button" id = "authBtn" value="checking..." onclick = "
+    <input type = "button" id = "authBtn" value="checking..." onclick = "
         if(this.value === 'Login'){
             // now logout
             FB.login(function(res){
@@ -59,7 +65,7 @@
                 checkLoginStatus(res);                 
             }); 
         }
-    ">
+    "><span id = "name"></span>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=2525173601079397&autoLogAppEvents=1"></script>
 
