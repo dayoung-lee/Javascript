@@ -44,19 +44,17 @@
 </head>
 <body>
     <input type = "button" id = "authBtn" value="checking..." onclick = "
-        if(this.value === 'Login'){
+        if(document.querySelector('#authBtn').value === 'Login'){
             // now logout
             FB.login(function(res){
                 // handle the response 
-                console.log(this.value);
-                this.value = 'Logout';
+                console.log(res);
             }); 
         }else {
             // now login
             FB.logout(function(res){
                 // handle the response 
-                console.log(this.value);
-                this.value = 'Login';
+                console.log(res);
             }); 
         }
     ">
