@@ -14,7 +14,7 @@
                 /* make the API call */
                 FB.api('/me', function(resp){
                     console.log(resp);
-                    document.querySelector('#name').innerHTML = 'Welcome, ' + resp.name + '!';
+                    document.querySelector('#name').innerHTML = ' Welcome, ' + resp.name + '!';
                 });
             }else{ 
                 document.querySelector('#authBtn').value = 'Login'; // checking to Login
