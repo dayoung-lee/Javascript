@@ -10,5 +10,5 @@ Ajax : Asyncronous
   + fetch(chage contents): https://dayoung-lee.github.io/Javascript/2/fetch.html 
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
   + bookmark (#! hashbang) #!welcome, #!html, #!css, #!javascript
-  + <li><a href="#!javascript" onclick = "fetchPage('javascript')">Javascript</a></li>
-  + SEO(search engine optimization) crawling issues, indexing issues, broken website navigation and useless addressbar (all pages load under the same URL), usless back/next/reload buttons/potential cloaking issues 
+  + a href="#!javascript" onclick = "fetchPage('javascript')">Javascript/a
+  + Bad idea: SEO(search engine optimization) crawling issues, indexing issues, broken website navigation and useless addressbar (all pages load under the same URL), usless back/next/reload buttons/potential cloaking issues 
