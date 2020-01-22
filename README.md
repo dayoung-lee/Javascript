@@ -14,3 +14,5 @@ SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
   + bookmark (#! hashbang) #!welcome, #!html, #!css, #!javascript  
  
   + Bad idea: SEO(search engine optimization) crawling issues, indexing issues, broken website navigation and useless addressbar (all pages load under the same URL), usless back/next/reload buttons/potential cloaking issues 
+
+## 3. Facebook login 
