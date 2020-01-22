@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <article>
+
+        </article>
+        <input type = "button" value = "fetch" onclick = "
+            // fetch('html').then(function(response){
+            //     response.text().then(function(text){
+            //         document.querySelector('article').innerHTML = text;
+            //     })
+            // })
+            // Asynchronous : 비동기 fetch가 되는동안 다른것부터 먼저 실행 1=> 2=> response end
+            // If not asysnchronous : 동기로 시작하면 response end => 1 => 2
+            // function callbackme(){
+            //     console.log('response end');
+            // }
+            // callbackme = function(){
+            //     console.log('response end');
+            // }
+            
+            fetch('html').then(function(response){
+                response.text().then(function(text){
+                    document.querySelector('article').innerHTML = text;
+                })
+            });
+            console.log(1);
+            console.log(2);
+        ">
+    </body>
+</html>
