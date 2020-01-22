@@ -18,10 +18,15 @@
             //       statusChangeCallback(response);
             //     });
             //   }
-            
+
             var callback = function(response){
                 console.log(response);
                 //statusChangeCallback(response);
+                if(response.status === 'connected'){
+                    document.querySelector('#authBtn').value = 'Logout';
+                }else{
+                    document.querySelector('#authBtn').value = 'Login';
+                }
             }
             FB.getLoginStatus(callback);
         };
@@ -36,9 +41,11 @@
     </script>
 </head>
 <body>
+    <input type = "button" id = "authBtn" valuce="checking...">
+
     <h1><a href = "#!welcome" onclick = "fetchPage('welcome')">WEB</a></h1>
-    <p>Souce: <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/tree/master/2'">
-        <input type = "button" value = "new tab" onclick = "window.open('https://github.com/dayoung-lee/Javascript/tree/master/2');"></p>
+    <p>Souce: <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/tree/master/3'">
+        <input type = "button" value = "new tab" onclick = "window.open('https://github.com/dayoung-lee/Javascript/tree/master/3');"></p>
     Theme: <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
     <ol id = "nav"> 
         <!--list-->
