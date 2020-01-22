@@ -16,5 +16,5 @@ SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
   + Bad idea: SEO(search engine optimization) crawling issues, indexing issues, broken website navigation and useless addressbar (all pages load under the same URL), usless back/next/reload buttons/potential cloaking issues 
 
 ## 3. Facebook login 
-Factbook API
+Factbook API, Factboodk javascript SDK, Access token (https://developers.facebook.com/?ref=logo_click)
 + https://dayoung-lee.github.io/Javascript/3/index.html
