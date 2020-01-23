@@ -1,14 +1,14 @@
 # Javascript
 This is Javascript examples for studying myself
 ## 1. Basic Concept of JavaScript
-+ <b>https://dayoung-lee.github.io/Javascript/1/index.html</b>
++ <b>https://dayoung-lee.github.io/Javascript/1-basic/index.html</b>
   + data type, if/while/for loop, array, function, object
   + object.function => method ex) person.fullName();
   
 ## 2. Ajax
 Ajax : Asyncronous JavaScript and XML<br/>
 SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
-+ <b>https://dayoung-lee.github.io/Javascript/2/index.html</b>
++ <b>https://dayoung-lee.github.io/Javascript/2-ajax/index.html</b>
   + fetch API(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
   + fetch API polyfill (to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications)
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
