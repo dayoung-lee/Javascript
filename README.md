@@ -44,3 +44,4 @@ SDK: software development kit
   - D: delete
 - Security
   - path.parse
+  - path.parse(queryData.id).base;
