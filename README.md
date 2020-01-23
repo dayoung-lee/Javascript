@@ -46,4 +46,3 @@ SDK: software development kit
   - npm sanitize html
   - path.parse (update, delete, password etc.)
   - path.parse(queryData.id).base;
-  - 
