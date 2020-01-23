@@ -33,7 +33,7 @@ var app = http.createServer(function(request,response){
 
                 var list = template.List(filelist);
                 var html = template.HTML(title, list, `<h2>${title}</h2>${description}`,
-                `<a href = "/create">create</a>`);
+                `| <a href = "/create">create</a> |`);
                 response.writeHead(200);
                 response.end(html); 
                 });
@@ -48,11 +48,11 @@ var app = http.createServer(function(request,response){
                     var sanitizedDescription = sanitizeHtml(description);         
                     var list = template.List(filelist); 
                     var html = template.HTML(sanitizedTitle, list, `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
-                    `<a href = "/create">create</a> 
-                    <a href = "/update?id=${sanitizedTitle}">update</a>
-                    <form action = "/delete_process" method = "post">
-                            <input type="hidden" name="id" value="${sanitizedTitle}">
-                            <input type="submit" value="delete">
+                    `<form action = "/delete_process" method = "post">
+                        | <a href = "/create">create</a> |
+                        <a href = "/update?id=${sanitizedTitle}">update</a> |
+                        <input type="hidden" name="id" value="${sanitizedTitle}">
+                        <input type="submit" value="delete" onclick = "return confirm('Are you sure you want to delete this?');">
                     </form>`);
                     response.writeHead(200);
                     response.end(html);                             
@@ -90,17 +90,17 @@ var app = http.createServer(function(request,response){
     }else if(pathname === '/update'){
         var filteredId = path.parse(queryData.id).base;        
         fs.readdir('data', function(err, filelist){                
-            fs.readFile(`data/${filterdId}`, 'utf8', function(err, description){
+            fs.readFile(`data/${filteredId}`, 'utf8', function(err, description){
                 var title = queryData.id;                    
                 var list = template.List(filelist); 
                 var html = template.HTML(title, list, `
                     <form action="/update_process" method="post">
                     <input type="hidden" name="id" value ="${title}">
-                    <p><input type="text" name = "title" placeholder = "title" value="${title}"></p>        
+                    <p><input type="text" name = "title" placeholder = "title" value="${title}"></p>
                     <p><textarea name = "description" placeholder = "description">${description}</textarea></p>    
                     <input type="submit"></form>
                     `,
-                    `<a href = "/create">create</a> <a href = "/update?id=${title}">update</a>`
+                    `| <a href = "/create"> create</a> | <a href = "/update?id=${title}">update</a> |`
                 );
                 response.writeHead(200);
                 response.end(html);                             
