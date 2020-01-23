@@ -32,6 +32,7 @@ SDK: software development kit
 - connect server<br>
   - http://opentutorials.org:3000/main?id=HTML&page=12
   - http: protocol, opentutorials.com: host(domail), :3000 (port), main: path, id=HTML&page=12: query string
-- get query string / change it to title
-- get data / change it to content 
+- synchronous/asynchoronous
+- get query string/change it to title
+- get data/change it to content 
 - CRUD file (fs module)
