@@ -38,3 +38,7 @@ SDK: software development kit
 - get query string/change it to title
 - get data/change it to content 
 - CRUD file (fs module)
+  - C: create/request.on
+  - R: read/
+  - U: update
+  - D: delete
