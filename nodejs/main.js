@@ -76,6 +76,6 @@ var app = http.createServer(function(request,response){
 });
 
 app.listen(process.env.PORT || 3000, function(){
-    console.log('Your node js server is running');
+    console.log('Connected!');
 });
 //app.listen(3000);
