@@ -8,7 +8,7 @@ This is Javascript examples for studying myself
 ## 2. Ajax
 Ajax : Asyncronous JavaScript and XML<br/>
 SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
-+ https://dayoung-lee.github.io/Javascript/2/index.html
++ <b>https://dayoung-lee.github.io/Javascript/2/index.html</b>
   + fetch API(chage contents/list(menu)): https://dayoung-lee.github.io/Javascript/2/fetch.html 
   + fetch API polyfill (to make fetch a viable replacement for most uses of XMLHttpRequest in traditional web applications)
   + hash(url, set up startup page): https://dayoung-lee.github.io/Javascript/2/hash.html
@@ -19,7 +19,7 @@ SPA : Single Page Application (Ajax, Pjax, Progressive Web Apps...)
 ## 3. Facebook login 
 Factbook API, Factboodk javascript SDK, Access token (https://developers.facebook.com/?ref=logo_click)<br/>
 SDK: software development kit
-+ https://dayoung-lee.github.io/liveDemo/p4/index.html
++ <b>https://dayoung-lee.github.io/liveDemo/p4/index.html</b>
 1. load SDK (download): line 22 index.hmtl
 2. SDK init (client id): line 8 index.html (appID & facebook api changelog log)
 3. Login: FB.login();
@@ -29,7 +29,7 @@ SDK: software development kit
 
 
 ## 4. Node.js
-+ deploy node app on heroku: https://practice-nodejs.herokuapp.com/
++ deploy node app on heroku: <b>https://practice-nodejs.herokuapp.com/</b>
 - connect server
   - http://opentutorials.org:3000/main?id=HTML&page=12
   - http: protocol, opentutorials.com: host(domail), :3000 (port), main: path, id=HTML&page=12: query string
