@@ -5,40 +5,75 @@ var express = require('express');
 var app = express();
 var qs = require('querystring');
 
-function templateHTML(title, list, body, control){
-    return `
-    <!doctype html>
-    <html>
-    <head>
-    <title>WEB1 - ${title}</title>
-    <meta charset="utf-8">
-    </head>
-    <body>
-    <h1><a href="/">WEB2</a></h1>
-    <input type = "button" value = "view source" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/nodejs/main.js'">
-    ${list}
-    ${control}
-    ${body}
-    </body>
-    </html>    
-    `;
-}
-
-function templateList(filelist){
-    // var list = `<ol>
-    // <li><a href="?id=HTML">HTML</a></li>
-    // <li><a href="?id=CSS">CSS</a></li>
-    // <li><a href="?id=JavaScript">JavaScript</a></li>
-    // </ol>`;
-    var list = '<ul>';
-    var i = 0;
-    while(i < filelist.length){
-        list = list + `<li><a href ="/?id=${filelist[i]}">${filelist[i]}</a></li>`;
-        i++;                   
+var template = {
+    HTML:function (title, list, body, control){
+        return `
+        <!doctype html>
+        <html>
+        <head>
+        <title>WEB1 - ${title}</title>
+        <meta charset="utf-8">
+        </head>
+        <body>
+        <h1><a href="/">WEB2</a></h1>
+        <input type = "button" value = "view source" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/nodejs/main.js'">
+        ${list}
+        ${control}
+        ${body}
+        </body>
+        </html>    
+        `;
+    },
+    List:function (filelist){
+        // var list = `<ol>
+        // <li><a href="?id=HTML">HTML</a></li>
+        // <li><a href="?id=CSS">CSS</a></li>
+        // <li><a href="?id=JavaScript">JavaScript</a></li>
+        // </ol>`;
+        var list = '<ul>';
+        var i = 0;
+        while(i < filelist.length){
+            list = list + `<li><a href ="/?id=${filelist[i]}">${filelist[i]}</a></li>`;
+            i++;                   
+        }
+        list = list + '</ul>';
+        return list;
     }
-    list = list + '</ul>';
-    return list;
 }
+// function templateHTML(title, list, body, control){
+//     return `
+//     <!doctype html>
+//     <html>
+//     <head>
+//     <title>WEB1 - ${title}</title>
+//     <meta charset="utf-8">
+//     </head>
+//     <body>
+//     <h1><a href="/">WEB2</a></h1>
+//     <input type = "button" value = "view source" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/nodejs/main.js'">
+//     ${list}
+//     ${control}
+//     ${body}
+//     </body>
+//     </html>    
+//     `;
+// }
+
+// function templateList(filelist){
+//     // var list = `<ol>
+//     // <li><a href="?id=HTML">HTML</a></li>
+//     // <li><a href="?id=CSS">CSS</a></li>
+//     // <li><a href="?id=JavaScript">JavaScript</a></li>
+//     // </ol>`;
+//     var list = '<ul>';
+//     var i = 0;
+//     while(i < filelist.length){
+//         list = list + `<li><a href ="/?id=${filelist[i]}">${filelist[i]}</a></li>`;
+//         i++;                   
+//     }
+//     list = list + '</ul>';
+//     return list;
+// }
 
 var app = http.createServer(function(request,response){
     var _url = request.url;
@@ -53,20 +88,27 @@ var app = http.createServer(function(request,response){
             fs.readdir('data', function(err, filelist){
                 var title = 'Welcome';
                 var description = 'Hello, I am Dayoung Lee. This is my web application with Node.js.';               
-                var list = templateList(filelist);
-                var template = templateHTML(title, list, `<h2>${title}</h2>${description}`,
+
+                // var list = templateList(filelist);
+                // var template = templateHTML(title, list, `<h2>${title}</h2>${description}`,
+                // `<a href = "/create">create</a>`);
+                // response.writeHead(200);
+                // response.end(template); 
+
+                var list = template.List(filelist);
+                var html = template.HTML(title, list, `<h2>${title}</h2>${description}`,
                 `<a href = "/create">create</a>`);
                 response.writeHead(200);
-                response.end(template); 
-                }); // readdir
+                response.end(html); 
+                });
         } 
         // data/files...
         else{            
             fs.readdir('data', function(err, filelist){                
                 fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
                     var title = queryData.id;                    
-                    var list = templateList(filelist); 
-                    var template = templateHTML(title, list, `<h2>${title}</h2>${description}`,
+                    var list = template.List(filelist); 
+                    var html = template.HTML(title, list, `<h2>${title}</h2>${description}`,
                     `<a href = "/create">create</a> 
                     <a href = "/update?id=${title}">update</a>
                     <form action = "/delete_process" method = "post">
@@ -74,23 +116,22 @@ var app = http.createServer(function(request,response){
                             <input type="submit" value="delete">
                     </form>`);
                     response.writeHead(200);
-                    response.end(template);                             
+                    response.end(html);                             
                 });
             });
         }
-    }else if(pathname === '/create'){
-      // home                              
+    }else if(pathname === '/create'){                         
       fs.readdir('data', function(err, filelist){
         var title = 'WEB - create';
-        var list = templateList(filelist);
-        var template = templateHTML(title, list, `
+        var list = template.List(filelist);
+        var html = template.HTML(title, list, `
             <form action="/create_process" method="post"> <!-- 입력된 값을 여기로 전송하고싶다.  get dafualt (query). post (hide query) -->
             <p><input type="text" name = "title" placeholder = "title"></p>        
             <p><textarea name = "description" placeholder = "description"></textarea></p>    
             <input type="submit"></form>`, ''
         );
         response.writeHead(200);
-        response.end(template); 
+        response.end(html); 
         }); // readdir
     }else if(pathname === '/create_process'){
         var body = '';
@@ -111,8 +152,8 @@ var app = http.createServer(function(request,response){
         fs.readdir('data', function(err, filelist){                
             fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
                 var title = queryData.id;                    
-                var list = templateList(filelist); 
-                var template = templateHTML(title, list, `
+                var list = template.List(filelist); 
+                var html = template.HTML(title, list, `
                     <form action="/update_process" method="post">
                     <input type="hidden" name="id" value ="${title}">
                     <p><input type="text" name = "title" placeholder = "title" value="${title}"></p>        
@@ -122,7 +163,7 @@ var app = http.createServer(function(request,response){
                     `<a href = "/create">create</a> <a href = "/update?id=${title}">update</a>`
                 );
                 response.writeHead(200);
-                response.end(template);                             
+                response.end(html);                             
             });
         });
     }else if(pathname === '/update_process'){
