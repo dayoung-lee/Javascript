@@ -1,0 +1,19 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "This is first node app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "engines": {
+    "node": "10.16.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sanitize-html": "^1.21.1"
+  }
+}
