@@ -34,6 +34,7 @@ SDK: software development kit
   - http://opentutorials.org:3000/main?id=HTML&page=12
   - http: protocol, opentutorials.com: host(domail), :3000 (port), main: path, id=HTML&page=12: query string
 - synchronous/asynchoronous
+- npm(pm2): Advanced, production process manager for Node.js
 - get query string/change it to title
 - get data/change it to content 
 - CRUD file (fs module)
