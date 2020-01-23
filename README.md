@@ -43,5 +43,7 @@ SDK: software development kit
   - U: update
   - D: delete
 - Security
-  - path.parse
+  - npm sanitize html
+  - path.parse (update, delete, password etc.)
   - path.parse(queryData.id).base;
+  - 
