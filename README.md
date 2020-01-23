@@ -29,7 +29,7 @@ SDK: software development kit
 
 
 ## 4. Node.js
-+ deploy node app on heroku: <b>https://practice-nodejs.herokuapp.com/</b>
++ deploy app on heroku: <b>https://practice-nodejs.herokuapp.com/</b>
 - connect server
   - http://opentutorials.org:3000/main?id=HTML&page=12
   - http: protocol, opentutorials.com: host(domail), :3000 (port), main: path, id=HTML&page=12: query string
@@ -46,3 +46,6 @@ SDK: software development kit
   - npm sanitize html
   - path.parse (update, delete, password etc.)
   - path.parse(queryData.id).base;
+  
+  ## 5. Node.js - Express
+  + deploy app on heroku: <b>https://node-express-app1.herokuapp.com/</b>
