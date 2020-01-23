@@ -1,7 +1,7 @@
 # Javascript
 This is Javascript examples for studying myself
 ## 1. Basic Concept of JavaScript
-+ https://dayoung-lee.github.io/Javascript/1/index.html
++ <b>https://dayoung-lee.github.io/Javascript/1/index.html</b>
   + data type, if/while/for loop, array, function, object
   + object.function => method ex) person.fullName();
   
