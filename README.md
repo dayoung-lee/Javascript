@@ -47,5 +47,5 @@ SDK: software development kit
   - path.parse (update, delete, password etc.)
   - path.parse(queryData.id).base;
   
-  ## 5. Node.js - Express
-  + deploy app on heroku: <b>https://node-express-app1.herokuapp.com/</b>
+## 5. Node.js - Express
++ deploy app on heroku: <b>https://node-express-app1.herokuapp.com/</b>
