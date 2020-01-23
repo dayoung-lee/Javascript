@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>example 1</title>    
+</head>
+<body>
+    <h1><a href = "index.html">Javascript example 1 </a></h1>
+    <p>Souce : <input type = "button" value = "current tab" onclick = "location.href = 'https://github.com/dayoung-lee/Javascript/blob/master/1/index.html'">
+                <input type = "button" value = "new tab" onclick = "window.open('https://github.com/dayoung-lee/Javascript/blob/master/1/index.html');"></p>
+    1. Theme: 
+    <input type = "button" value = "night" onclick = "document.querySelector('body').style.backgroundColor = 'black'; document.querySelector('body').style.color = 'white'">
+    <input type = "button" value = "day" onclick = "document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'">
+    <br/><br/>
+    1-1. Toggle & Function (this) & jQuery (make code simple):
+    <input type = "button" value = "night" onclick = "nightDayHandler(this)">
+    <p id = "test">Hi this is javascript example1.</p>
+    <img src = "jQuery_ex1.jpg"><br/>
+    <!-- Word Count -->
+    <textarea style = "width: 300px; height: 100px;" id = "textArea" placeholder = "type here" onkeyup = "countingWords()"></textarea> 
+    Words: <span id = "textCountResult">0</span><br/><br/>
+
+    <div id = 'list'>
+        List: 
+        <ol>
+            <li><a href = "#">HTML</a></li>
+            <li><a href = "#">CSS</a></li>
+            <li><a href = "#">Javascript</a></li>
+        </ol>
+    </div>
+
+    2. <input type = "button" value = "Alert Message" onclick = "alert('Success')">
+    <p>
+        3. onchange alert : <input type = "text" onchange="alert('changed')">
+        onkeydown alert: <input type = "text" onkeydown="alert('key down!')">
+    </p>
+
+    <p>4. Loop(Array)</p>
+    <ul>
+    <script>
+        var i = 0;
+        var fruitArray = ['banana', 'apple', 'pear', 'kiwi', 'grapes'];
+        while(i < fruitArray.length){
+            document.write('<li><a href = "http://google.com">' + fruitArray[i] +'</a></li>');
+            i++;
+        }
+    </script>
+    </ul>
+
+    <p>5. Function </p>
+    <ul>
+        <script>
+            function two(){
+                document.write('<li>2-1</li>');
+                document.write('<li>2-3</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+
+    <p>6. Object</p>
+    <script>
+        var coworkers = {
+            "programmer": "egoing",
+            "designer" : "leezche"
+        };
+        document.write("programmer : " + coworkers.programmer + "<br>");
+        document.write("designer : " + coworkers.designer + "<br>");
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : " + coworkers["data scientist"] + "<br>");
+    </script>
+    </ul>
+    <!-- Date -->
+    <p>7. new Date() </p>
+    <h1 id = "time-result"></h1>
+    
+    <!-- js files -->
+    <script src = "colors.js"></script>
+    <script src = "clock.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</body>
+
+</html>
