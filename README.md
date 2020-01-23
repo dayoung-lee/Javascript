@@ -39,6 +39,6 @@ SDK: software development kit
 - get data/change it to content 
 - CRUD file (fs module)
   - C: create/request.on
-  - R: read/
+  - R: read/ redirect response.writeHead(302, {Location: `/?id=${title}`});
   - U: update
   - D: delete
