@@ -37,8 +37,10 @@ SDK: software development kit
 - npm(pm2): Advanced, production process manager for Node.js/pm2 start main.js
 - get query string/change it to title
 - get data/change it to content 
-- CRUD file (fs module)
+- Restful API - CRUD file (fs module)
   - C: create/request.on
   - R: read/ redirect response.writeHead(302, {Location: `/?id=${title}`});
   - U: update
   - D: delete
+- Security
+  - path.parse
